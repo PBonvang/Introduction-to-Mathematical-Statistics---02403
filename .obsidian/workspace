@@ -1,0 +1,195 @@
+{
+  "main": {
+    "id": "662ed068b7c497b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8d7d0ea7d2fdb47",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d181e632d0118acf",
+    "type": "split",
+    "children": [
+      {
+        "id": "de39944d0af2694a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6d9b1f0528d80a1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a9e862de7ef20590",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3e9132a690e0b0f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1535def4b702381",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ce1d044c0d83f74",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1c03937d0d904732",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f39244207be24a7e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "419e0dcf70d1d3bd",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "8577ed068f712121",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "674e55defd807c4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba6c5adc7b432fe3",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": true,
+                  "search": "path:Zettlekasten",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": false,
+                  "colorGroups": [
+                    {
+                      "query": "path:\"Uni/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 16711880
+                      }
+                    },
+                    {
+                      "query": "tag:#Reference",
+                      "color": {
+                        "a": 1,
+                        "rgb": 65531
+                      }
+                    },
+                    {
+                      "query": "tag:#Project-idea",
+                      "color": {
+                        "a": 1,
+                        "rgb": 7601920
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0.556965153637038,
+                  "repelStrength": 5.97248537770821,
+                  "linkStrength": 1,
+                  "linkDistance": 160,
+                  "scale": 0.7132754626224449,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 238
+  },
+  "active": "b8d7d0ea7d2fdb47",
+  "lastOpenFiles": [
+    "Notes/Normal distribution.md",
+    "Notes/Distributions.md",
+    "Notes/Linear regression confidence intervals.md",
+    "Notes/Residual Sum of Squares - RSS.md",
+    "Introduction to Mathematical Statistics - 02403.md",
+    "Notes/Analysis of Variance - ANOVA.md",
+    "Uni/Courses/Introduction to Mathematical Statistics - 02403/Introduction to Mathematical Statistics - 02403.md",
+    "Zettlekasten/Permanent notes/Confidence interval.md",
+    "Zettlekasten/Permanent notes/Hypothesis testing.md",
+    "Zettlekasten/Permanent notes/Discrete hypothesis testing.md"
+  ]
+}

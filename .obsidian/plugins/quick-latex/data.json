@@ -1,0 +1,14 @@
+{
+  "moveIntoMath_toggle": true,
+  "autoCloseRound_toggle": true,
+  "autoCloseSquare_toggle": true,
+  "autoCloseCurly_toggle": true,
+  "addAlignBlock_toggle": true,
+  "addAlignBlock_parameter": "align*",
+  "addMatrixBlock_toggle": true,
+  "addMatrixBlock_parameter": "bmatrix",
+  "autoFraction_toggle": true,
+  "autoLargeBracket_toggle": true,
+  "autoSumLimit_toggle": true,
+  "autoEncloseSup_toggle": true
+}
