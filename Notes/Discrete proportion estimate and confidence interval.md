@@ -48,7 +48,7 @@ $$
 &\mathrm{V}(\hat{p})=\mathrm{V}\left(\frac{X}{n}\right)=\frac{1}{n^{2}} \mathrm{~V}(X)=\frac{p(1-p)}{n}
 \end{aligned}
 $$
-$\hat{p}$ is thus an unbiased [[central estimator]] for $p$, and the standard error / [[Standard deviation#Sample standard deviation|sampling standard deviation]] of $\hat{p}$ is 
+$\hat{p}$ is thus an unbiased [[Statistics Terminology|central estimator]] for $p$, and the standard error / [[Standard deviation#Sample standard deviation|sampling standard deviation]] of $\hat{p}$ is 
 $$
 \sigma_{\hat{p}}=\sqrt{\frac{p(1-p)}{n}}
 $$
