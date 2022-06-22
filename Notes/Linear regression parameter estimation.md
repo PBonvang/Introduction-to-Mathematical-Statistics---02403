@@ -123,12 +123,15 @@ Coefficients:
 (Intercept) b0 		 s_b0	 	t_b0	pval_b0
 x1 			b1 		 s_b1	 	t_b1	pval_b1 *
 x2 			b2 		 s_b2	 	t_b2	pval_b2 ***
+.
+.
+.
 ---
 Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: {sigma} on {n-(p+1)} degrees of freedom
 Multiple R-squared: {coefficient_of_determination}, Adjusted R-squared: {adjusted_coefficient_of_determination}
-F-statistic: {f_dist_statistic} on {p} and {n-(p+1)} DF, p-value: {anova_pval}
+F-statistic: {f_dist_statistic} on {p} and {n-(p+1)} DF, p-value: {pval_for_H0}
 ```
 # Examples
 ````ad-example

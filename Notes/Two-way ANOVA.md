@@ -92,6 +92,36 @@ follows an $F$-distribution with $l-1$ and $(k-1)(l-1)$ degrees of freedom.
 **Two-way MSE:**
 $$MSE=\frac{SSE}{(k-1)(l-1)}$$
 
+# Two-way ANOVA table
+$$
+\begin{array}{|l|c|c|l|c|c|}
+\hline \begin{array}{l}
+\text { Source of } \\
+\text { variation }
+\end{array} & \begin{array}{l}
+\text { Degrees of } \\
+\text { freedom }
+\end{array} & \begin{array}{l}
+\text { Sums of } \\
+\text { squares }
+\end{array} & \begin{array}{l}
+\text { Mean sums of } \\
+\text { squares }
+\end{array} & \begin{array}{l}
+\text { Test } \\
+\text { statistic } F
+\end{array} & \begin{array}{l}
+p
+\text {-value }
+\end{array} \\
+\hline \text { Treatment } & k-1 & S S(T r) & M S(T r)=\frac{S S(T r)}{k-1} & F_{T r}=\frac{M S(T r)}{M S E} & P\left(F>F_{T r}\right) \\
+\hline \text { Block } & l-1 & S S(B l) & M S(B l)=\frac{S S(B l)}{l-1} & F_{B l}=\frac{M S(B I)}{M S E} & P\left(F>F_{B l}\right) \\
+\hline \text { Residual } & (l-1)(k-1) & S S E & M S E=\frac{S S E}{(k-1)(l-1)} & & \\
+\hline \text { Total } & n-1 & S S T & & & \\
+\hline
+\end{array}
+$$
+
 # Post hoc comparisons
 Two way post hoc investigation uses the same approach and principles as [[One-way ANOVA#Post hoc comparisons|one-way ANOVA]] post hoc, with the following differences:
 1. Use the two-way MSE and/or SSE instead of the one-way
@@ -108,6 +138,8 @@ $$
 where $t_{1-\alpha / 2}$ is based on the $t$-distribution with $(k-1)(l-1)$ degrees of freedom.
 If all $M=k(k-1) / 2$ combinations of pairwise confidence intervals are calculated using the formula $M$ times, the [[Bonferroni correction]] should be used $\alpha_{\text {Bonferroni }}=\alpha / M$
 ```
+
+**LSD:** [[Least Significant Difference - LSD]]
 
 ```ad-summary
 title: Method <br> Two-way post hoc pairwise hypothesis tests
@@ -144,7 +176,7 @@ D <- data.frame(treatm, block, y)
 fit <- lm(y ~ treatm + block, data=D)
 anova(fit)
 ```
-See how the table values are calculated here: [[Two-way ANOVA table]].
+See how the table values are calculated here: [[#Two-way ANOVA table]].
 # Terminology
 **Block:** Block refers to a observational unit (e.g. people) used for the different treatments, when the same observation unit is used for every treatment. Comes from agriculture, where a block was an actual piece of land. But a block can also be a class, or another group of observational units.
 Generally used to avoid variability between test subjects/observational units effecting the results of a study without our knowledge.

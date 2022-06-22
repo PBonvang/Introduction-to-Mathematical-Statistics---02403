@@ -115,5 +115,7 @@ $$
 We should therefore include 64 students in the new study.
 ```
 
+# See also
+- [[Discrete sample size determination]]
 # References
 - [[Introduction to Mathematical Statistics - 02403]]

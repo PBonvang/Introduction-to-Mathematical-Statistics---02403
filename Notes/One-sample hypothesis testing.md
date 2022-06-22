@@ -93,17 +93,7 @@ $$
 H_{0}: \mu=\mu_{0}
 $$
 ```
-**Value meaning:**
-$$
-\begin{array}{cl}
-\hline p<0.001  & \text { Very strong evidence against } H_{0} \\
-0.001 \leq p<0.01 & \text { Strong evidence against } H_{0} \\
-0.01 \leq p<0.05  & \text { Some evidence against } H_{0} \\
-0.05 \leq p<0.1  & \text { Weak evidence against } H_{0} \\
-p \geq 0.1 &  \text { Little or no evidence against } H_{0} \\
-\hline
-\end{array}
-$$
+
 # Examples
 ````ad-example
 title: Example: Sleeping medicine

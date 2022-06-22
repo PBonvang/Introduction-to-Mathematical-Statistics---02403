@@ -1,5 +1,5 @@
 ---
-aliases: [] # Searchable synonyms and translations
+aliases: [Error propagation] # Searchable synonyms and translations
 ---
 Modified: `$= dv.current().file.mtime`
 Tags: []

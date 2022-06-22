@@ -33,6 +33,22 @@ predict(fit, newdata=Xnew, interval="prediction", level=1-alpha)
 ^method6-9
 
 # [[Matrix formulation of linear regression|Matrix formulation]]
+```ad-summary
+title: Method <br> Line intervals, matrix formulation
+collapse: open
+
+The ($1- \alpha)$ **confidence interval** for the line $\hat{\beta}\dotprod x_{\text {new }}$ is
+$$
+\hat{\beta}\dotprod x_{\text {new }} \pm t_{1-\alpha / 2} \cdot\hat{\sigma}\cdot\sqrt{x_{\text {new }}\dotprod\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1}\dotprod x_{\text {new }}^{\top}}
+$$
+
+and the $(1-\alpha)$ **prediction interval** is
+$$
+\hat\beta \pm t_{1-\alpha/2}\cdot\hat\sigma\cdot\sqrt{1+\boldsymbol{x}_{\text {new }}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{x}_{\text {new }}^{T}}
+$$
+where $t_{1-\alpha / 2}$ is the $(1-\alpha / 2)$-quantile of the $t$-distribution with $n-2$ degrees of freedom.
+```
+
 To determine the line intervals for a new point
 $$
 x_{\text {new }}=\left[1, x_{1, \text { new }}, \ldots, x_{p, \text { new }}\right]
@@ -45,7 +61,21 @@ $$\large
 &=\sigma^{2} \boldsymbol{x}_{\text {new }}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{x}_{\text {new }}^{T}
 \end{aligned}
 $$
+$$
+\begin{aligned}
+\mathrm{V}[\hat{\boldsymbol{\beta}}] &=\mathrm{V}\left[\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \boldsymbol{Y}\right] \\
+&=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \mathrm{~V}[\boldsymbol{X} \boldsymbol{\beta}+\boldsymbol{\varepsilon}] \boldsymbol{X}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-T} \\
+&=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T}(\mathrm{~V}[\boldsymbol{X} \boldsymbol{\beta}]+\mathrm{V}[\boldsymbol{\varepsilon}]) \boldsymbol{X}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-T} \\
+&=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \sigma^{2} \boldsymbol{I} \boldsymbol{X}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-T} \\
+&=\sigma^{2}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \boldsymbol{X}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \\
+&=\sigma^{2}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1}
+\end{aligned}
+$$
+$\beta:[\beta_0,\beta_1,\cdots,\beta_p]$
+$X:$ Existing observations
+
 in practice we'll replace $\sigma^{2}$ with its estimate $\hat\sigma^{2}$ and use the appropriate [[t-distribution]] and standard errors $\hat\sigma$ to calculate the confidence intervals.
+
 The variance of a single prediction is:
 $$\large
 \begin{aligned}
@@ -58,15 +88,37 @@ $$
 The confidence intervals is therefore:
 $$\begin{align*}
 CI&=\hat\beta \pm t_{1-\alpha/2}\cdot\sqrt{\mathrm{V}\left(\hat\beta\right)}\\
-&=\hat\beta \pm t_{1-\alpha/2}\cdot\mathrm{sd}\left(\hat\beta\right)
+&=\hat\beta \pm t_{1-\alpha/2}\cdot\mathrm{sd}\left(\hat\beta\right)\\
+&=\hat\beta \pm t_{1-\alpha/2}\cdot\hat\sigma
 \end{align*}$$
 The prediction intervals:
 $$\begin{align*}
 PI&=\hat\beta \pm t_{1-\alpha/2}\cdot\sqrt{\mathrm{V}\left(\hat\beta\right)+\mathrm{V}\left(\hat{Y}_{\text {new }}\right)}\\
-&=\hat\beta \pm t_{1-\alpha/2}\cdot\sqrt{\mathrm{sd}\left(\hat\beta\right)^{2}+\hat\sigma^{2}}
+&=\hat\beta \pm t_{1-\alpha/2}\cdot\sqrt{\mathrm{sd}\left(\hat\beta\right)^{2}+\hat\sigma^{2}}\\
+&=\hat\beta \pm t_{1-\alpha/2}\cdot\hat\sigma\cdot\sqrt{1+\boldsymbol{x}_{\text {new }}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{x}_{\text {new }}^{T}}
 \end{align*}$$
 
 where $t_{1-\alpha/2}$ is the ($1-\alpha/2$) [[Quantiles and percentiles|Quantile]] of the [[t-distribution]] with $n-(p+1)$ degrees of freedom.
+
+````ad-example
+title: Example <br> Linear regression, matrix formulation line intervals (Exam June 2021, Q. 25)
+collapse: open
+
+The multiple linear regression problem can be written in matrix-vector notation as
+$$
+\boldsymbol{Y}=\boldsymbol{X} \boldsymbol{\beta}+\boldsymbol{\epsilon} ; \quad \boldsymbol{\epsilon} \sim N\left(\mathbf{0}, \sigma^{2} \boldsymbol{I}\right)
+$$
+where $\boldsymbol{\beta}=\left[\beta_{0}, \beta_{1}, \beta_{2}\right]^{T}$
+
+Calculating the 95% prediction interval for a new observation at $x_{1}=x_{2}=0$:
+
+```R
+x <- matrix(c(1, 0, 0), ncol = 3)
+x %*% beta + c(-1, 1) * sigma * qt(0.975, df = n - 3) *
+    sqrt(1 + x %*% solve(t(X) %*% X) %*% t(x))
+```
+
+````
 
 # In R
 

@@ -58,6 +58,8 @@ $$\lambda_{15 \min }=-\log(0.3)=1.2$$
 ```
 
 
+# [[Exponential distribution]]
+If the number of events follow a Poisson distribution with the mean value: $\lambda$, the time between events follow a [[Exponential distribution]] with a mean of $1/\lambda$.
 # [[Probability density function - PDF]]
 $$
 f(x ; \lambda)=\frac{\lambda^{x}}{x !} e^{-\lambda}

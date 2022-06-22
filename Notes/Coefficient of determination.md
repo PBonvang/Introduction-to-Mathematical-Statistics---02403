@@ -12,6 +12,8 @@ The coefficient of determination expresses the proportion of variation in the ou
 $$
 r^{2}=1-\frac{\sum_{i}\left(y_{i}-\hat{y}_{i}\right)^{2}}{\sum_{i}\left(y_{i}-\bar{y}\right)^{2}}
 $$
+$\hat{y}_i:$ Group mean
+$\bar{y}:$ General mean
 
 ```ad-info
 title: Proof

@@ -50,7 +50,9 @@ $$\begin{align*}
 \end{align*}$$
 
 # In R
-`dbinom(k, size=n, prob={theta})`
+```R
+dbinom(k, size=n, prob={theta})
+```
 
 # References
 - [[Signals and data - 02462]]

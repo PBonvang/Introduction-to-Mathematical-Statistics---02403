@@ -2,7 +2,7 @@
 aliases: [ Mindste kvadraters metode] # Searchable synonyms and translations
 ---
 Modified: `$= dv.current().file.mtime`
-Tags: []
+Tags: [#MOC]
 Subjects: [[Statistics]], [[Simple Linear Regression]]
 ****
 

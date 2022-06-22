@@ -3,7 +3,7 @@ aliases: [Fordelinger] # Searchable synonyms and translations
 ---
 
 Modified: `$= dv.current().file.mtime`
-Tags: [#MOC]
+Tags: []
 Subjects: [[Statistics]], [[Probability]]
 ****
 

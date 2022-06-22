@@ -36,6 +36,10 @@ The assumptions for the an ANOVA model is:
 1. The observations comes from a [[Normal distribution]] within each group
 2. The variance $\sigma^{2}$ is the same for all groups (Variance homogeneity)
 
+## Explained variance
+$$\frac{\op{SS(Tr)}+\op{SS(Bl)}}{\op{SST}}$$
+The explained variance of a model is the sum of variation (SS(Tr) + SSBl) divided by the total sum of squares.
+
 # Terminology
 **Treatments:** aka. Groups, is the things, being compared.
 

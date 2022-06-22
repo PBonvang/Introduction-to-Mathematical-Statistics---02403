@@ -60,5 +60,11 @@ Note that $S_{p}^{2}$ (the pooled variance) is a weighted average of the sample 
 
 # Confidence interval
 $$\large\bar X - \bar Y \pm t_{1- \frac{\alpha}{2}}S_{p}\sqrt{\frac{1}{n_{1}}+ \frac{1}{n_{2}}}$$
+
+# Variance
+$$
+V\left(S_{p}^{2}\right)=\frac{\left(n_{1}-1\right)^{2} V\left(S_{1}^{2}\right)+\left(n_{2}-1\right)^{2} V\left(S_{2}^{2}\right)}{\left(n_{1}+n_{2}-2\right)^{2}}
+$$
+
 # References
 - [[Introduction to Mathematical Statistics - 02403]]

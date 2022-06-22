@@ -132,7 +132,7 @@ where $s_{i}^{2}$ is the variance within the $i$ th group
 $$
 s_{i}^{2}=\frac{1}{n_{i}-1} \sum_{j=1}^{n_{i}}\left(y_{i j}-\bar{y}_{i}\right)^{2} .
 $$
-When $k=2$, that is, we are in the two-sample case presented in [[Two-sample quantitative data]], the result here is the [[Pooled variance]]
+When $k=2$, that is, we are in the two-sample case presented in [[Two-sample hypothesis testing]], the result here is the [[Pooled variance]]
 $$
 \text { For } k=2: M S E=s_{p}^{2}=\frac{\left(n_{1}-1\right) s_{1}^{2}+\left(n_{2}-1\right) s_{2}^{2}}{n-2}
 $$
@@ -163,11 +163,39 @@ follows an [[F-distribution]] with $k-1$ and $n-k$ degrees of freedom.
 ^theorem8-6
 
 The test statistic $F$ will naturally be large if SS(Tr) is large and the SSE is small, which is clear evidence against the null hypothesis.
-The statistics are usually collected in an [[One-way ANOVA table]].
+The statistics are usually collected in an [[#One-way ANOVA table]].
 See [[#^example8-1|Ex 8.7]].
 
 **Note** that the [[p-value]] should be compared with the ($1-\a$) quantile of the [[F-distribution]] with $k-1$ and $n-k$ degrees of freedom.
 
+# One-way ANOVA table
+$$
+\begin{array}{|l|c|c|c|c|c|}
+\hline \begin{array}{l}
+\text { Source of } \\
+\text { variation }
+\end{array} & \begin{array}{l}
+\text { Degrees of } \\
+\text { freedom }
+\end{array} & \begin{array}{l}
+\text { Sums of } \\
+\text { squares }
+\end{array} & \begin{array}{l}
+\text { Mean sum of } \\
+\text { squares }
+\end{array} & \begin{array}{l}
+\text { Test- } \\
+\text { statistic } F
+\end{array} & \begin{array}{l}
+p\text {-value }
+\end{array} \\
+\hline \text { Treatment } & k-1 & S S(T r) & M S(T r)=\frac{S S(T r)}{k-1} & F_{\text {obs }}=\frac{M S(T r)}{M S E} & P\left(F>F_{\text {obs }}\right) \\
+\hline \text { Residual } & n-k & S S E & M S E=\frac{S S E}{n-k} & & \\
+\hline \text { Total } & n-1 & S S T & & & \\
+\hline
+\end{array}
+$$
+^ANOVATable
 # Post hoc comparisons
 If we reject $H_{0}$, we're often interested in which group/treatment was actually different ([[Analysis of Variance - ANOVA#Purpose|ANOVA purpose 2]]).
 This is done by pair wise comparison of the treatments, and such comparisons can be done using [[Two-sample hypothesis testing#^method3-51|Method 3.51]],  with MSE as the estimate of the error variance $s^{2}$, and $n-k$ degrees of freedom.
@@ -256,7 +284,7 @@ Residuals  9  5.195  0.5772
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
-How each value is calculated can be seen in [[One-way ANOVA table]].
+How each value is calculated can be seen in [[#One-way ANOVA table]].
 
 # Examples
 ````ad-example
